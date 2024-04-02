@@ -1,0 +1,117 @@
+/*******************************************************/
+/******************* ## Main Footer ********************/
+/*******************************************************/
+/* Footer Widgets */
+.footer-widget
+    margin-bottom: 50px
+.footer-title
+    color: white
+    font-size: 18px
+    margin-top: -5px
+    margin-bottom: 28px
+    
+.widget_nav_menu
+    +res-ab(lg)
+        +gapLR(margin, auto)
+        max-width: max-content
+    ul
+        flex-wrap: wrap
+        display: inline-flex
+        +gapLR(margin, -22px)
+        li
+            margin: 0 22px 5px
+            font-family: $heading-font
+            
+.widget_newsletter
+    form
+        display: flex
+        align-items: center
+        max-width: 430px
+        +res-ab(lg)
+            +gapLR(margin, auto)
+        label
+            margin: 5px 0 0 0
+            line-height: 1
+            color: $primary-color
+            padding-bottom: 21px
+            border-bottom: 2px solid rgba(255, 255, 255, 0.20)
+        input
+            font-size: 16px
+            color: $base-color
+            padding: 0 0 12px 15px
+            border: none
+            margin-right: auto
+            background: transparent
+            border-bottom: 2px solid rgba(255, 255, 255, 0.20)
+            &::placeholder
+                color: rgba(255, 255, 255, 0.3)
+        button
+            flex: none
+            margin-left: 20px
+            font-size: 14px
+            color: black
+            line-height: 1
+            font-weight: 600
+            padding: 14px 25px
+            border-radius: 14px
+            background: $primary-color
+            i
+                margin-left: 5px
+                
+.widget_contact_info
+    ul
+        li
+            font-size: 18px
+            display: flex
+            &:not(:last-child)
+                margin-bottom: 20px
+            i
+                font-size: 16px
+                margin-top: 8px
+                color: $primary-color
+                margin-right: 20px
+            a:hover
+                color: white
+            
+/* Footer Bottom */  
+.footer-bottom
+    position: relative
+    .copyright-text
+        color: white
+        a
+            color: $primary-color
+    .scroll-top
+        color: $lighter-color
+        font-size: 22px
+        position: absolute
+        top: -30px
+        left: calc(50% - 30px)
+        +size(60px)
+        line-height: 60px
+        text-align: center
+        border-radius: 14px
+        +res-bl(lg)
+            +size(40px)
+            font-size: 16px
+            line-height: 40px
+            left: calc(50% - 20px)
+        
+.footer-bottom-nav
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -22px)
+    li
+        margin: 0 22px 5px
+        a:hover
+            color: white
+        
+/* Footer Two */
+.footer-two
+    .footer-widget
+        margin-bottom: 25px
+    hr
+        opacity: 1
+        background: #212324
+    .widget_nav_menu ul
+        +res-bl(md)
+            justify-content: center

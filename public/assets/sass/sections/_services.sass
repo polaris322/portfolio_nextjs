@@ -1,0 +1,110 @@
+/*******************************************************/
+/******************* ## Services Area *****************/
+/*******************************************************/
+.service-item
+    display: flex
+    transition: 0.5s
+    padding: 35px 50px
+    margin-bottom: 30px
+    border-radius: 15px
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bl(sm)
+        +gapLR(padding, 25px)
+    +res-bl(ms)
+        display: block
+    .number
+        color: white
+        font-size: 24px
+        margin-right: 50px
+        font-family: $heading-font
+    .content
+        +res-bl(ms)
+            +gapTB(margin, 25px)
+        p
+            margin-bottom: 0
+    .details-btn
+        flex: none
+        margin-left: auto
+        align-self: center
+    &:hover
+        border-color: $primary-color
+        .details-btn
+            color: $black-color
+            background: $primary-color
+        
+/* Service Style Two */
+.service-item-two
+    display: flex
+    align-items: center
+    +res-bl(lg)
+        flex-wrap: wrap
+    &:not(:last-child)
+        margin-bottom: 50px
+        padding-bottom: 35px
+        border-bottom: 1px solid $border-color
+    > *
+        margin-bottom: 25px
+    .icon
+        width: 10%
+        flex: none
+        margin-right: 2%
+        text-align: center
+        +res-bl(lg)
+            width: auto
+            max-width: 30%
+            margin-right: 20px
+    .title
+        width: 16%
+        flex: none
+        margin-right: 5%
+        line-height: 1.6
+        letter-spacing: 1.8px
+        text-transform: uppercase
+        +res-bl(lg)
+            width: auto
+            margin-right: 0
+            max-width: calc(70% - 20px)
+    .text
+        color: #757575
+        line-height: 1.5
+        margin-right: 5%
+        padding-left: 20px
+        font-family: $heading-font
+        border-left: 1px solid $primary-color
+        +res-bl(lg)
+            width: auto
+    .list
+        width: 15%
+        flex: none
+        font-size: 18px
+        margin-right: 7%
+        font-weight: 500
+        +res-bl(lg)
+            width: auto
+        li
+            color: white
+            display: flex
+            font-family: $heading-font
+            &:before
+                font-size: 14px
+                content: "\f069"
+                margin-right: 10px
+                color: $primary-color
+                font-family: "Font Awesome 5 Pro"
+    .details-btn
+        flex: none
+        +res-ab(xs)
+            +size(78px)
+            font-size: 40px
+            line-height: 78px
+    &:hover
+        .details-btn
+            color: $black-color
+            transform: rotate(0)
+            background: $primary-color
+        
+.services-more-btn
+    .theme-btn
+        +res-ab(xxl)
+            padding: 20px 50px

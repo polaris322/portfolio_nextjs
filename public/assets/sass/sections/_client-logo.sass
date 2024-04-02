@@ -1,0 +1,27 @@
+/*******************************************************/
+/**************** ## Client Logo Area ******************/
+/*******************************************************/ 
+.client-logo-wrap
+    +flexcenter(space-between)
+    flex-wrap: wrap
+    +gapLR(margin, -30px)
+    +res-bl(lg)
+        justify-content: center
+    .client-logo-item
+        width: calc(20% - 60px)
+        margin: 0 30px 70px
+        filter: grayscale(1) opacity(0.2)
+        +res-bl(lg)
+            width: calc(25% - 60px)
+            margin-bottom: 40px
+        +res-bl(md)
+            width: calc(33.33% - 60px)
+        +res-bl(xs)
+            width: calc(50% - 60px)
+        &:hover
+            filter: grayscale(0) opacity(1)
+        
+.style-two.client-logo-wrap
+    .client-logo-item
+        text-align: center
+        filter: grayscale(0) opacity(1)

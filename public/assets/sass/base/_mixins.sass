@@ -1,0 +1,168 @@
+// GLOBAL MIXINS
+
+=overlay($bg-colour, $opacity)
+    z-index: 1
+    position: relative
+    &::before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 100%
+        z-index: -1
+        top: 0
+        left: 0
+        opacity: $opacity
+        background-color: $bg-colour
+
+
+// Column Gap
+=colgap($gap)
+    margin-left: -$gap / 2
+    margin-right: -$gap / 2
+    & > div
+        padding-left: $gap / 2
+        padding-right: $gap / 2
+
+    
+// Make Own Container
+=container($width)
+    max-width: $width
+    margin-left: auto
+    margin-right: auto
+
+
+// Flex Center 
+=flexcenter($justify)
+    display: flex
+    align-items: center
+    justify-content: $justify
+
+// Absolute Middle
+=abs-middle()
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    
+// Positioning
+=poLT($left, $top: $left)
+    position: absolute
+    left: $left
+    top: $top
+=poLB($left, $bottom: $left)
+    position: absolute
+    left: $left
+    bottom: $bottom
+=poRT($right, $top: $right)
+    position: absolute
+    right: $right
+    top: $top
+=poRB($right, $bottom: $right)
+    position: absolute
+    right: $right
+    bottom: $bottom
+    
+    
+// Mixing for Size 
+=size($width, $height: $width)
+    width: $width
+    height: $height
+
+
+// Mixing for Box 
+=box($bg, $width, $height: $width)
+    width: $width
+    height: $height
+    background: $bg
+
+// Mixing for Circle 
+=circle($bg, $size)
+    width: $size
+    height: $size
+    background: $bg
+    line-height: $size
+    border-radius: 50%
+    text-align: center
+
+// Mixing for color & background color % border color
+=color($color, $bg, $bdr-color: $color)
+    color: $color
+    background: $bg
+    border-color: $bdr-color
+
+// Mixing for clearfix
+=clearfix()
+    &:after
+        display: block
+        clear: both
+        content: ""
+    
+// Gap Left and Right
+=gapLR($property, $value)
+    #{$property}-left: $value
+    #{$property}-right: $value
+      
+// Gap Top and Bottom
+=gapTB($property, $value)
+    #{$property}-top: $value
+    #{$property}-bottom: $value
+ 
+
+// Respond above.
+@mixin res-ab($breakpoint)
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint)
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint)
+
+        // Write the media query.
+        @media only screen and (min-width: $breakpoint-value)
+            @content
+        
+        // If the breakpoint doesn't exist in the map.
+    @else
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.'
+
+    
+// Respond Below
+@mixin res-bl($breakpoint)
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint)
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint)
+
+        // Write the media query.
+        @media only screen and (max-width: ($breakpoint-value - 1))
+            @content
+
+        // If the breakpoint doesn't exist in the map.
+    @else
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.'
+
+// Respond Between
+@mixin res-bt($lower, $upper)
+    // If both the lower and upper breakpoints exist in the map.
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper)
+        // Get the lower and upper breakpoints.
+        $lower-breakpoint: map-get($breakpoints, $lower)
+        $upper-breakpoint: map-get($breakpoints, $upper)
+
+        // Write the media query.
+        @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1))
+            @content
+        
+        // If one or both of the breakpoints don't exist.
+    @else
+        // If lower breakpoint is invalid.
+        @if (map-has-key($breakpoints, $lower) ==false) 
+            // Log a warning.
+            @warn 'Your lower breakpoint was invalid: #{$lower}.'
+
+        // If upper breakpoint is invalid.
+        @if (map-has-key($breakpoints, $upper) ==false) 
+            // Log a warning.
+            @warn 'Your upper breakpoint was invalid: #{$upper}.'
+        
+    

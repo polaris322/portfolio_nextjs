@@ -1,0 +1,23 @@
+/*******************************************************/
+/******************** ## Lets Talk *******************/
+/*******************************************************/
+.lets-talk-text
+    color: white
+    font-size: 145px
+    font-weight: 600
+    display: inline-block
+    text-transform: capitalize
+    +res-bl(xl)
+        font-size: 120px
+    +res-bl(lg)
+        font-size: 10vw
+    i
+        color: $primary-color
+        transform: rotate(-45deg) translateX(-15px)
+        +res-bl(sm)
+            transform: rotate(-45deg) translateX(-10px)
+        +res-bl(xs)
+            transform: rotate(-45deg) translateX(-5px)
+    &:hover
+        color: white
+            

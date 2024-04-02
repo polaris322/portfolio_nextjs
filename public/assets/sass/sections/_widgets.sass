@@ -1,0 +1,160 @@
+/*******************************************************/
+/***************** ## Sidebar Widgets *****************/
+/*******************************************************/
+.main-sidebar
+    padding: 50px 40px
+    border-radius: 12px
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bt(lg, xl)
+        +gapLR(padding, 20px)
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+
+.widget
+    &:not(:last-child)
+        margin-bottom: 45px
+        
+.widget-title
+    margin-bottom: 34px
+    position: relative
+    padding-bottom: 25px
+    &:after
+        content: ''
+        +poLB(0)
+        width: 50px
+        height: 3px
+        background: rgba(255, 255, 255, 0.10)
+    
+.widget-search
+    .widget-title
+        margin-bottom: 20px
+        padding-bottom: 0
+        &:after
+            content: none
+    form
+        display: flex
+        padding: 14px 25px
+        align-items: center
+        background: #131313
+        border-radius: 12px
+        border: 1px solid $border-color
+        input
+            padding: 0
+            border: none
+            font-size: 16px
+            font-weight: 400
+            background: transparent
+            font-family: $base-font
+            &::placeholder
+                color: #3E3E3E
+            
+        button
+            flex: none
+            color: $primary-color
+            background: transparent
+            
+.widget-category
+    ul
+        li
+            display: flex
+            font-size: 18px
+            align-items: center
+            color: rgba(255, 255, 255, 0.3)
+            &:not(:last-child)
+                margin-bottom: 14px
+            i
+                margin-right: 12px
+            a
+                font-weight: 500
+                font-family: $heading-font
+                &:not(:hover)
+                    color: rgba(255, 255, 255, 0.3)
+                
+.widget-recent-news
+    ul
+        li
+            display: flex
+            align-items: center
+            &:not(:last-child)
+                margin-bottom: 35px
+                padding-bottom: 35px
+                border-bottom: 1px solid $border-color
+            .image
+                flex: none
+                max-width: 65px
+                margin-right: 30px
+                +res-bl(xl)
+                    margin-right: 20px
+                img
+                    border-radius: 50%
+            .blog-meta
+                text-transform: uppercase
+            h5
+                font-size: 18px
+                margin-bottom: 0
+                +res-bl(xs)
+                    font-size: 16px
+                    
+
+.tag-coulds
+    display: flex
+    flex-wrap: wrap
+    margin: -10px -5px 0
+    a
+        font-weight: 500
+        padding: 2px 20px
+        margin: 10px 5px 0
+        border-radius: 10px
+        font-family: $heading-font
+        text-transform: capitalize
+        background: rgba(255, 255, 255, 0.10)
+        &:hover
+            color: $black-color
+            background: $primary-color
+
+.cta-widget
+    overflow: hidden
+    border-radius: 14px
+    background-size: cover
+    padding: 115px 40px 40px
+    background-position: center
+    +overlay(#131313, 0.9)
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    &:before
+        mix-blend-mode: multiply
+    .sub-title
+        color: $primary-color
+        display: inline-block
+        margin-bottom: 10px
+    h4
+        line-height: 1.45
+        margin-bottom: 30px
+        
+/* Room Sidebar */
+.widget-search-filter
+    .form-group
+        margin-bottom: 30px
+        +clearfix()
+        label
+            font-size: 24px
+            font-weight: 600
+            margin-bottom: 15px
+            color: $heading-color
+            font-family: $heading-font
+        input,
+        .nice-select
+            color: #CDCDCD
+            font-size: 16px
+            line-height: 1.5
+            font-weight: 400
+            padding: 16px 25px
+            border-bottom: none
+            font-family: $base-font
+        .nice-select
+            .current
+                color: #CDCDCD
+            &:after
+                right: 25px
+                border-color: #CDCDCD

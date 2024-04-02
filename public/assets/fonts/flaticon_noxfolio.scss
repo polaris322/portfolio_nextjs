@@ -1,0 +1,53 @@
+$flaticon_noxfolio-font: "flaticon_noxfolio";
+
+@font-face {
+    font-family: $flaticon_noxfolio-font;
+    src: url("./flaticon_noxfolio.ttf?943527ded4c907448c49887765f842d3") format("truetype"),
+url("./flaticon_noxfolio.woff?943527ded4c907448c49887765f842d3") format("woff"),
+url("./flaticon_noxfolio.woff2?943527ded4c907448c49887765f842d3") format("woff2"),
+url("./flaticon_noxfolio.eot?943527ded4c907448c49887765f842d3#iefix") format("embedded-opentype"),
+url("./flaticon_noxfolio.svg?943527ded4c907448c49887765f842d3#flaticon_noxfolio") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_noxfolio !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_noxfolio-map: (
+    "asterisk": "\f101",
+    "sun": "\f102",
+    "star": "\f103",
+    "asterisk-1": "\f104",
+    "call": "\f105",
+    "waning-moon": "\f106",
+    "moon": "\f107",
+);
+
+.flaticon-asterisk:before {
+    content: map-get($flaticon_noxfolio-map, "asterisk");
+}
+.flaticon-sun:before {
+    content: map-get($flaticon_noxfolio-map, "sun");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_noxfolio-map, "star");
+}
+.flaticon-asterisk-1:before {
+    content: map-get($flaticon_noxfolio-map, "asterisk-1");
+}
+.flaticon-call:before {
+    content: map-get($flaticon_noxfolio-map, "call");
+}
+.flaticon-waning-moon:before {
+    content: map-get($flaticon_noxfolio-map, "waning-moon");
+}
+.flaticon-moon:before {
+    content: map-get($flaticon_noxfolio-map, "moon");
+}

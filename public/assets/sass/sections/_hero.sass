@@ -1,0 +1,160 @@
+/*******************************************************/
+/******************** ## Hero Section ******************/
+/*******************************************************/
+.hero-content
+    max-width: 415px
+    .h2
+        display: block
+        font-weight: 400
+        margin-bottom: 5px
+        color: rgba(255, 255, 255, 0.35)
+    h1
+        margin-bottom: 25px
+        b
+            color: $primary-color
+        +res-bl(xxl)
+            font-size: 55px
+        +res-bt(lg, xl)
+            font-size: 46px
+        +res-bl(md)
+            font-size: 45px
+        +res-bl(xs)
+            font-size: 40px
+    .hero-btns
+        .theme-btn
+            margin-top: 15px
+            margin-right: 35px
+        .read-more
+            margin-top: 15px
+            text-decoration: underline
+            
+.author-image-part
+    z-index: 1
+    overflow: hidden
+    +container(575px)
+    position: relative
+    text-align: center
+    border-radius: 0 0 580px 565px
+    .bg-circle
+        z-index: -2
+        +size(425px)
+        +poLT(5%, 4%)
+        border-radius: 50%
+        background: $black-color
+        +res-bl(xxl)
+            left: 0
+            top: 15%
+            +size(300px)
+    .progress-shape
+        +poRB(0)
+        z-index: -1
+        width: 100%
+        text-align: center
+        
+        
+.hero-counter-wrap
+    padding: 35px 40px
+    border-radius: 16px
+    background: $black-color
+    +res-ab(md)
+        max-width: 265px
+    +res-bt(lg, xl)
+        +gapLR(padding, 28px)
+    +res-bl(md)
+        +gapLR(padding, 25px)
+    .counter-item
+        &:not(:last-child)
+            margin-bottom: 25px
+            padding-bottom: 25px
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    .count-text
+        line-height: 1
+        font-size: 40px
+        font-weight: 500
+        color: $primary-color
+        &.plus:after
+            content: '+'
+        &.k-plus:after
+            content: 'k+'
+        &.percent:after
+            content: '%+'
+    .counter-title
+        display: block
+        
+/* Hero Area Two */
+.hero-area-two
+    .author-image-part
+        border-radius: 0
+        max-width: none
+        margin-top: -25%
+        .bg-circle
+            +abs-middle()
+            top: 62%
+            background: $primary-color
+            +res-ab(sm)
+                +size(485px)
+            +res-bl(ms)
+                +size(350px)
+            +res-bl(xs)
+                +size(300px)
+            
+    .scroll-down
+        z-index: 3
+        +poLB(50%, 0)
+        max-width: 22%
+        transform: translate(-50%, 50%)
+        
+.hero-two-content
+    span
+        display: block
+        font-weight: 700
+        text-transform: uppercase
+        font-family: $heading-font
+    .sub-title
+        z-index: 5
+        position: relative
+        margin-bottom: 10px
+    .title
+        z-index: 5
+        color: white
+        font-size: 200px
+        line-height: 0.9em
+        position: relative
+        margin-left: -13px
+        +res-bl(lg)
+            display: flex
+            font-size: 10vw
+            justify-content: space-between
+        small
+            margin-left: 10%
+            font-size: 0.45em
+            color: $primary-color
+    .name
+        z-index: 5
+        color: white
+        +poRT(0, 40%)
+        line-height: 1
+        font-size: 90px
+        text-decoration: underline
+        text-underline-offset: 13px
+        text-decoration-thickness: 4px
+        +res-bl(lg)
+            font-size: 5vw
+            text-underline-offset: 8px
+            text-decoration-thickness: 2px
+    .designations
+        z-index: 5
+        +poLB(0, 25%)
+        color: white
+        display: flex
+        line-height: 1
+        font-size: 90px
+        padding: 15px 35px
+        border-radius: 60px
+        backdrop-filter: blur(20px)
+        background: linear-gradient(94deg, rgba(49, 50, 52, 0.61) 46.62%, rgba(88, 77, 77, 0.61) 115.88%)
+        +res-bl(lg)
+            font-size: 5vw
+        span
+            font-weight: 400
+            margin-right: 15px

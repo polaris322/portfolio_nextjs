@@ -1,0 +1,67 @@
+/*******************************************************/
+/******************** ## Skills Area ******************/
+/*******************************************************/
+.skill-item
+    transition: 0.5s
+    text-align: center
+    margin-bottom: 30px
+    border-radius: 14px
+    padding: 25px 10px 10px
+    background: $lighter-color
+    border: 1px solid $border-color
+    h5
+        margin-top: 15px
+        margin-bottom: 16px
+    .percent
+        padding: 10px
+        display: block
+        font-size: 20px
+        font-weight: 600
+        transition: 0.5s
+        line-height: 1.2
+        border-radius: 14px
+        background: #131313
+        font-family: $heading-font
+        color:  rgba(255, 255, 255, 0.35)
+    &:hover
+        border-color: $primary-color
+        .percent
+            color: $black-color
+            background: $primary-color
+        
+/* Skill */
+.skill-area-two
+    background: #0F0E0E
+    
+.skill-wrap-two
+    max-width: 615px
+    +res-ab(lg)
+        margin-left: auto
+    
+.skill-item-two
+    text-align: center
+    margin-bottom: 35px
+    .icon-percent
+        padding: 55px 35px
+        background: #171717
+        margin-bottom: 15px
+        border-radius: 148px
+        +res-bl(sm)
+            border-radius: 75px
+        .percent
+            display: block
+            font-size: 30px
+            margin-top: 25px
+            color: $primary-color
+    .title
+        padding: 8px
+        transition: 0.35s
+        margin-bottom: 0
+        border-radius: 50px
+        border: 1px solid $border-color
+        +res-bl(xs)
+            font-size: 18px
+    &:hover
+        .title
+            background: #171717
+            border-color: #171717

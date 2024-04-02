@@ -1,0 +1,117 @@
+/*******************************************************/
+/************** ## Padding Margin Spacing *************/
+/*******************************************************/
+/* Padding Around */
+@for $i from 1 through 1
+    .p-#{5 * $i}
+        padding: 5px * $i !important
+@for $i from 2 through 50
+    .p-#{5 * $i}
+        padding: 5px * $i
+
+/* Padding Top */
+@for $i from 1 through 1
+    .pt-#{5 * $i},
+    .py-#{5 * $i}
+        padding-top: 5px * $i !important
+@for $i from 2 through 50
+    .pt-#{5 * $i},
+    .py-#{5 * $i}
+        padding-top: 5px * $i
+
+/* Padding Bottom */
+@for $i from 1 through 1
+    .pb-#{5 * $i},
+    .py-#{5 * $i}
+        padding-bottom: 5px * $i !important
+@for $i from 2 through 50
+    .pb-#{5 * $i},
+    .py-#{5 * $i}
+        padding-bottom: 5px * $i
+
+/* Margin Around */
+@for $i from 1 through 1
+    .m-#{5 * $i}
+        margin: 5px * $i !important
+@for $i from 2 through 50
+    .m-#{5 * $i}
+        margin: 5px * $i
+
+/* Margin Top */
+@for $i from 1 through 1
+    .mt-#{5 * $i},
+    .my-#{5 * $i}
+        margin-top: 5px * $i !important
+@for $i from 2 through 50
+    .mt-#{5 * $i},
+    .my-#{5 * $i}
+        margin-top: 5px * $i
+
+/* Margin Bottom */
+@for $i from 1 through 1
+    .mb-#{5 * $i},
+    .my-#{5 * $i}
+        margin-bottom: 5px * $i !important
+@for $i from 2 through 50
+    .mb-#{5 * $i},
+    .my-#{5 * $i}
+        margin-bottom: 5px * $i
+
+
+/* Responsive Padding Margin */
++res-bl(lg)
+    /* Padding Around */
+    @for $i from 0 through 1
+        .rp-#{5 * $i}
+            padding: 5px * $i !important
+    @for $i from 2 through 30
+        .rp-#{5 * $i}
+            padding: 5px * $i
+    
+    /* Padding Top */
+    @for $i from 0 through 1
+        .rpt-#{5 * $i},
+        .rpy-#{5 * $i}
+            padding-top: 5px * $i !important
+    @for $i from 2 through 30
+        .rpt-#{5 * $i},
+        .rpy-#{5 * $i}
+            padding-top: 5px * $i
+
+    /* Padding Bottom */
+    @for $i from 0 through 1
+        .rpb-#{5 * $i},
+        .rpy-#{5 * $i}
+            padding-bottom: 5px * $i !important
+    @for $i from 2 through 30
+        .rpb-#{5 * $i},
+        .rpy-#{5 * $i}
+            padding-bottom: 5px * $i
+
+    /* Margin Around */
+    @for $i from 0 through 1
+        .rm-#{5 * $i}
+            margin: 5px * $i !important
+    @for $i from 2 through 30
+        .rm-#{5 * $i}
+            margin: 5px * $i
+
+    /* Margin Top */
+    @for $i from 0 through 1
+        .rmt-#{5 * $i},
+        .rmy-#{5 * $i}
+            margin-top: 5px * $i !important
+    @for $i from 2 through 30
+        .rmt-#{5 * $i},
+        .rmy-#{5 * $i}
+            margin-top: 5px * $i
+
+    /* Margin Bottom */
+    @for $i from 0 through 1
+        .rmb-#{5 * $i},
+        .rmy-#{5 * $i}
+            margin-bottom: 5px * $i !important
+    @for $i from 2 through 30
+        .rmb-#{5 * $i},
+        .rmy-#{5 * $i}
+            margin-bottom: 5px * $i

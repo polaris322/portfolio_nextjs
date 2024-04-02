@@ -1,0 +1,226 @@
+/*******************************************************/
+/***************** ## Custom Animation ****************/
+/*******************************************************/
+/* Animation Delay */
+@for $i from 1 through 2
+     .delay-#{1 * $i}-0s
+        animation-delay: #{$i}s
+   
+@for $i from 1 through 9
+    .delay-0-#{1 * $i}s
+        animation-delay: #{0 + .1 * $i}s
+
+@for $i from 1 through 9
+    .delay-1-#{1 * $i}s
+        animation-delay: #{1 + .1 * $i}s
+
+/* Menu Sticky */
+@-webkit-keyframes sticky
+    0%
+        top: -100px
+    100%
+        top: 0
+
+@keyframes sticky
+    0%
+        top: -100px
+    100%
+        top: 0
+        
+/* Hero Circle */
+@keyframes rotated_circle
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+             
+/* Feedback Rotated */
+@keyframes semi_rotated
+    0%,
+    100%
+        transform: rotate(20deg)
+    50%
+        transform: rotate(-20deg)
+    
+/* Image BG Rotated */
+@keyframes semi_rotated_two
+    0%,
+    100%
+        transform: rotate(-11deg)
+    50%
+        transform: rotate(11deg)
+    
+@keyframes move_arround
+    0%
+        top: 20px
+        left: 20px
+    25%
+        top: 20px
+        left: -20px
+    50%
+        top: -20px
+        left: -20px
+    75%
+        top: -20px
+        left: 20px
+    100%
+        top: 20px
+        left: 20px
+             
+/* Hero Circle */
+@keyframes upDownLeft
+    0%,
+    100%
+        transform: translate(0px, 0px)
+    25%,
+    75%
+        transform: translate(0px, 50px)
+    50%
+        transform: translate(-50px, 50px)
+    
+@keyframes shapeAnimationOne
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(0px, 150px) rotate(90deg)
+
+  50%
+    transform: translate(150px, 150px) rotate(180deg)
+
+  75%
+    transform: translate(150px, 0px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationTwo
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(-150px, -0px) rotate(270deg)
+
+  50%
+    transform: translate(-150px, 150px) rotate(180deg)
+
+  75%
+    transform: translate(-0px, 150px) rotate(90deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationThree
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate(50px, 150px) rotate(90deg)
+
+  50%
+    transform: translate(150px, 150px) rotate(180deg)
+
+  75%
+    transform: translate(150px, 50px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationFour
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate((-150px) -50px) rotate(90deg)
+
+  50%
+    transform: translate(-150px, -150px) rotate(180deg)
+
+  75%
+    transform: translate(-50px, -150px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes shapeAnimationFive
+  0%
+    transform: translate(0px, 0px) rotate(0deg)
+
+  25%
+    transform: translate((-100px) -100px) rotate(90deg)
+
+  50%
+    transform: translate(100px, 50px) rotate(180deg)
+
+  75%
+    transform: translate(-100px, 150px) rotate(270deg)
+
+  100%
+    transform: translate(0px, 0px) rotate(360deg)
+
+@keyframes down-up-one
+  0%
+    transform: rotateX(0deg) translateY(0px)
+
+  50%
+    transform: rotateX(0deg) translateY(25px)
+
+  100%
+    transform: rotateX(0deg) translateY(0px)
+
+@keyframes down-up-two
+  0%
+    transform: rotateX(0deg) translate(0px)
+
+  50%
+    transform: rotateX(0deg) translate(25px, -25px)
+
+  100%
+    transform: rotateX(0deg) translate(0px)
+
+@keyframes leftRightOne
+    0%,
+    100%
+        transform: translateX(0)
+    50%
+        transform: translateX(-100px)
+
+@keyframes leftRightTwo
+    0%,
+    100%
+        transform: translateX(0)
+    50%
+        transform: translateX(100px)
+
+@keyframes zoomInOut
+    0%,
+    100%
+        transform: scale(1)
+    50%
+        transform: scale(0.5)
+
+@keyframes border
+    0%
+        +size(0)
+    50%
+        width: 0
+        height: 100%
+    100%
+        +size(100%)
+    
+/* Headline */
+@keyframes marquee
+    100%
+        transform: translate(-100%, 0)
+    
+@keyframes marquee_right
+    from
+        transform: translate3d(-100%, 0, 0)
+    to
+        transform: translate3d(0, 0, 0)
+
+@keyframes marquee_left
+    from
+        transform: translate3d(0, 0, 0)
+    to
+        transform: translate3d(-100%, 0, 0)

@@ -1,0 +1,40 @@
+/*******************************************************/
+/******************* ## Headline Text *******************/
+/*******************************************************/        
+.marquee-wrap
+    display: flex
+    overflow: hidden
+    white-space: nowrap
+
+.marquee-inner
+    display: flex
+    &.left
+        animation: marquee_left 20s linear infinite
+    &.right
+        animation: marquee_right 20s linear infinite
+        
+.marquee-item
+    color: white
+    font-size: 20px
+    font-weight: 700
+    margin-right: 20px
+    font-family: $heading-font
+    text-transform: uppercase
+    i
+        margin-left: 30px
+        color: $primary-color
+        
+.style-two
+    .marquee-item
+        line-height: 1
+        font-size: 140px
+        text-transform: capitalize
+        +res-bl(xl)
+            font-size: 10vw
+        span
+            color: transparent
+            -webkit-text-stroke-width: 1px
+            -webkit-text-stroke-color: white
+            
+.headline-area-h2
+    transform: rotate(4.4deg)

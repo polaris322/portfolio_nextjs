@@ -1,0 +1,236 @@
+/*******************************************************/
+/******************** ## About Section *****************/
+/*******************************************************/
+.about-content-part
+    .section-title
+        p
+            max-width: 620px
+    
+.about-image-part
+    padding-left: 40px
+    position: relative
+    +res-bl(lg)
+        padding-left: 100px
+    +res-bl(xs)
+        padding-left: 50px
+    .dot-shape
+        +poLT(-10%, 25%)
+        animation: rotated_circle linear 10s infinite
+    
+.about-info-box
+    display: flex
+    flex-wrap: wrap
+    max-width: 580px
+    border-radius: 20px
+    padding: 16px 40px 2px
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .info-box-item
+        margin-bottom: 15px
+        &:not(:last-child)
+            margin-right: 50px
+    
+.info-box-item
+    display: flex
+    align-items: center
+    > i
+        margin-right: 15px
+        color: $black-color
+        +circle($primary-color, 40px)
+    .content
+        line-height: 1.5
+        span
+            font-size: 14px
+        a
+            +res-ab(xs)
+                font-size: 18px
+            &:not(:hover)
+                color: white
+            
+.about-btn
+    display: flex
+    align-items: center
+    background: white
+    border-radius: 32px
+    color: $black-color
+    padding: 10px 25px 10px 15px
+    img
+        border-radius: 50%
+        margin-right: 15px
+    h6
+        font-weight: 700
+        color: $black-color
+        margin-bottom: 0
+        margin-right: 15px
+        +res-bl(ms)
+            font-size: 14px
+    i
+        transform: rotate(-45deg)
+    &.btn-one
+        +poLB(-10%, 42%)
+        +res-bl(lg)
+            left: 5%
+        h6
+            margin-right: 9px
+    &.btn-two
+        +poLB(-18%, 23%)
+        +gapTB(padding, 5px)
+        padding-left: 5px
+        +res-bl(lg)
+            left: 0
+        +res-bl(ms)
+            bottom: 12%
+            
+            
+/* What I Do */
+.what-i-do-images
+    position: relative
+    padding-right: 17%
+    padding-bottom: 13%
+    img
+        width: 100%
+    .last-image
+        +poRB(0)
+        max-width: 55%
+    .icon
+        z-index: -1
+        line-height: 1
+        font-size: 85px
+        position: absolute
+        color: $primary-color
+        +res-bl(md)
+            font-size: 45px
+        &.first
+            right: 0
+            top: 11%
+        &.last
+            bottom: 0
+            left: 12%
+            
+            
+/* About Page */
+.about-right-part
+    height: 465px
+    position: relative
+    +res-bl(ms)
+        height: 400px
+    &:after
+        content: ''
+        z-index: -2
+        +size(390px)
+        +poRB(10%, 0)
+        border-radius: 50%
+        background: $lighter-color
+        +res-bl(ms)
+            +size(250px)
+    .experience-years
+        +poRT(0, 50%)
+        +size(190px)
+        display: flex
+        color: black
+        padding: 40px
+        font-weight: 700
+        border-radius: 50%
+        flex-direction: column
+        justify-content: center
+        font-family: $heading-font
+        background: $primary-color
+        transform: translateY(-50%)
+        +res-bl(ms)
+            top: 0
+            +size(130px)
+            padding: 25px
+            transform: translateY(-30%)
+        b
+            line-height: 1
+            display: block
+            font-size: 50px
+            margin-bottom: 6px
+            +res-bl(ms)
+                font-size: 25px
+        h5
+            color: black
+            margin-bottom: 0
+            font-weight: 700
+            line-height: 1.3
+            +res-bl(ms)
+                font-size: 16px
+    .about-btn
+        position: absolute
+        &.one
+            left: 0
+            top: 30%
+        &.two
+            left: 10%
+            top: calc(60% - 30px)
+            +res-bl(ms)
+                left: 0
+        &.three
+            left: 20%
+            bottom: 10%
+            +res-bl(ms)
+                left: 0
+    .dot-shape
+        z-index: -1
+        position: absolute
+        &.one
+            top: 0
+            left: 30%
+        &.two
+            bottom: 0
+            right: 15%
+            
+            
+/* About Two */
+.about-content-two
+    .text
+        color: #757575
+        max-width: 530px
+        
+.about-info-item
+    margin-top: 40px
+    font-weight: 500
+    font-family: $heading-font
+    text-transform: uppercase
+    small
+        font-size: 14px
+        color: $primary-color
+    b
+        color: white
+        display: block
+        
+.about-counter-wrap
+    position: relative
+    .counter-item
+        padding: 55px 35px
+        text-align: center
+        +flexcenter(center)
+        border-radius: 95px
+        flex-direction: column
+        border: 1px solid $border-color
+        .count-text
+            line-height: 1
+            font-size: 50px
+            font-weight: 700
+            stroke-width: 1px
+            stroke: #FFFFFF42
+            color: transparent
+            margin-bottom: 20px
+            font-family: $heading-font
+            -webkit-text-stroke-width: 1px
+            -webkit-text-stroke-color: #FFFFFF42
+            +res-bl(xs)
+                font-size: 35px
+            &.k:after
+                content: 'K'
+        .counter-title
+            color: white
+            text-transform: capitalize
+            +res-ab(xl)
+                font-size: 20px
+    .counter-logo
+        +abs-middle()
+        top: 55%
+        +circle($primary-color, 117px)

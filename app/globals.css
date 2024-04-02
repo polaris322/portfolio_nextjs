@@ -1,0 +1,26 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+.scroll-top {
+  align-items: center;
+  justify-content: center;
+}
+.scroll-top:hover {
+  color: black;
+}
+
+.main-menu .navbar-collapse li {
+  cursor: pointer;
+}
+.main-menu .navbar-collapse li.dropdown:hover > ul {
+  display: block;
+}
+
+.testimonials-wrap .slick-slide {
+  padding: 0 15px;
+}
+
+.project-item.style-four {
+  position: relative;
+}

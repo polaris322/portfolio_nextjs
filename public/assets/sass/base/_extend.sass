@@ -1,0 +1,40 @@
+/*******************************************************/
+/******************* ## Repeat Style ******************/
+/*******************************************************/
+// Global Extend/Inheritance 
+
+// Heading
+.heading,
+%heading
+    color: $heading-color
+    font-family: $heading-font  
+    
+%h1
+    @extend %heading
+    font-size: $h1-size
+
+%h2
+    @extend %heading
+    font-size: $h2-size
+
+%h3
+    @extend %heading
+    line-height: 1.3
+    font-size: $h3-size
+
+%h4
+    @extend %heading
+    line-height: 1.1
+    font-size: $h4-size
+
+%h5
+    line-height: 1.4
+    @extend %heading
+    font-size: $h5-size
+
+%h6
+    @extend %heading
+    font-size: $h6-size
+    
+%box-shadow
+    box-shadow: 10px 0 60px rgba(69, 69, 69, 0.1)

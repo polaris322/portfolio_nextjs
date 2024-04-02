@@ -1,0 +1,173 @@
+/*******************************************************/
+/******************** ## Contact Area *****************/
+/*******************************************************/
+.form-style-one
+    .form-group
+        margin-bottom: 32px
+        .for-icon
+            right: 26px
+            font-size: 16px
+            margin-bottom: 0
+            position: absolute
+            margin-top: -45px
+            color: rgba(255, 255, 255, 0.20)
+        .nice-select,
+        .form-control
+            font-size: 16px
+            color: white
+            font-weight: 400
+            line-height: 1.3
+            padding: 19px 45px 19px 30px
+            border-radius: 14px
+            background: $lighter-color
+            font-family: $heading-font
+            border: 1px solid $border-color
+            &:focus
+                box-shadow: none
+                background: #070707
+                border-color: $primary-color
+                &::placeholder
+                    color: white
+                ~ .for-icon
+                    color: white
+            &::placeholder
+                color: rgba(255, 255, 255, 0.20)
+        label
+            font-size: 18px
+            color: white
+            font-weight: 500
+            margin-bottom: 18px
+            font-family: $heading-font
+        .nice-select
+            .current
+                font-weight: 400
+                color: rgba(255, 255, 255, 0.20)
+            &:focus
+                .current
+                    color: white
+                &:after
+                    border-color: white
+            .list
+                background: $black-color
+            .option
+                &.focus,
+                &.selected.focus,
+                &:hover
+                    background-color: #5c5a5a
+            &:after
+                right: 26px
+                margin-top: -6px
+                border-color: rgba(255, 255, 255, 0.20)
+            
+/* Contact Form Two */
+.contact-form-two
+    border-radius: 6px
+    background: #0F0E0E
+    padding: 60px 43px 43px
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .form-group
+        margin-bottom: 44px
+        .for-title
+            top: -8px
+            left: 28px
+            line-height: 1
+            color: #838287
+            padding: 0 8px
+            font-size: 16px
+            margin-bottom: 0
+            position: absolute
+            background: #0F0E0E
+        .for-icon
+            margin-top: -41px
+            color: $primary-color
+        .form-control
+            border-radius: 5px
+            +gapTB(padding, 16px)
+            background: transparent
+    .theme-btn
+        width: 100%
+        border-radius: 28px
+        i
+            margin-left: 0
+            margin-right: 8px
+            
+.contact-two-content
+    h3
+        margin-bottom: 33px
+    h5
+        margin-bottom: 25px
+        +res-ab(lg)
+            font-size: 22px
+        +res-bl(xs)
+            font-size: 18px
+        i
+            margin-right: 15px
+            color: $primary-color
+    .arrow
+        font-size: 150px
+        color: $primary-color
+        transform: rotate(-45deg) translateX(-15px)
+        +res-bl(sm)
+            display: none
+.social-flow
+    align-items: center
+    display: inline-flex
+    h4
+        margin-bottom: 15px
+        margin-right: 25px
+    .social-style-one
+        margin-bottom: 15px
+        a
+            background: transparent
+            border: 1px solid $border-color
+            +res-ab(xs)
+                +size(40px)
+                line-height: 40px
+            &:hover
+                background: $primary-color
+            
+/* Contact Page Style */
+.contact-page-content
+    h6
+        font-size: 18px
+        margin-bottom: 22px
+    .social-style-one a
+        +size(40px)
+        line-height: 40px
+        color: $lighter-color
+        &:not(:hover)
+            background: white
+        
+.contact-page-form
+    border-radius: 14px
+    padding: 45px 50px 50px
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bl(ms)
+        +gapLR(padding, 20px)
+    .form-group
+        .nice-select,
+        .form-control
+            background: rgba(255, 255, 255, 0.07)
+
+.our-location
+    iframe
+        height: 600px
+        +res-bl(xxl)
+            height: 500px
+        +res-bl(lg)
+            height: 400px
+        +res-bl(sm)
+            height: 350px
+
+
+.has-error
+    .help-block.with-errors
+        margin-top: 5px
+        color: red
+#msgSubmit
+    &.h4
+        font-size: 20px
+        margin-bottom: 0
+        margin-top: 10px

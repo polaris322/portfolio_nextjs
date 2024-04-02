@@ -1,0 +1,178 @@
+/*******************************************************/
+/****************** ## Pricing Area *******************/
+/*******************************************************/
+.pricing-item
+    padding: 10px
+    border-radius: 16px
+    margin-bottom: 30px
+    background: $lighter-color
+    .pricing-header
+        padding: 47px 50px
+        border-radius: 16px
+        background: #131313
+        border: 1px solid $border-color
+        +res-bl(xl)
+            +gapLR(padding, 25px)
+        .save-percent
+            margin-bottom: 40px
+            color: rgba(255, 255, 255, 0.35)
+            span
+                color: $primary-color
+        .price
+            font-size: 48px
+            font-weight: 500
+            color: $primary-color
+            font-family: $heading-font
+            +res-bl(xl)
+                font-size: 40px
+            +res-bl(xs)
+                font-size: 35px
+            &:before
+                content: '$'
+            &:after
+                font-size: 16px
+                font-weight: 400
+                color: $base-color
+                content: '/per month'
+    .pricing-details
+        padding: 40px 50px
+        +res-bl(xl)
+            +gapLR(padding, 25px)
+        p
+            margin-bottom: 35px
+        ul
+            padding-bottom: 12px
+            li
+                color: white
+                font-size: 20px
+                margin-bottom: 34px
+                +res-bl(xs)
+                    font-size: 18px
+                &:before
+                    content: "\f00c"
+                    font-size: 18px
+                    margin-right: 15px
+                    color: $primary-color
+                    font-family: 'Font Awesome 5 Pro'
+                &.unable
+                    color: white
+                    opacity: 0.35
+                    &:before
+                        color: white
+    &:not(:hover)
+        .theme-btn
+            color: $base-color
+            background: rgba(255, 255, 255, 0.1)
+        
+    &.style-two
+        padding: 60px 50px
+        border-radius: 10px
+        +res-bl(md)
+            +gapLR(padding, 35px)
+        .title
+            display: flex
+            margin-bottom: 20px
+            .icon
+                flex: none
+                margin-top: 3px
+                font-size: 14px
+                margin-right: 20px
+                color: $black-color
+                +circle($primary-color, 33px)
+            h4
+                font-size: 26px
+                margin-bottom: 0
+            .save
+                color: #888686
+        .price
+            color: white
+            display: block
+            line-height: 1
+            font-size: 50px
+            font-weight: 700
+            margin-bottom: 30px
+            font-family: $heading-font
+            &:before
+                content: '$'
+            &:after
+                color: #888686
+                font-size: 16px
+                font-weight: 500
+                content: ' Monthly'
+        .arrow
+            text-align: right
+            margin-bottom: 60px
+            +res-bl(sm)
+                text-align: left
+                margin-bottom: 40px
+        .theme-btn
+            font-size: 15px
+            border-radius: 7px
+            +gapLR(padding, 33px)
+        .list
+            +res-bl(sm)
+                margin-top: 45px
+            li
+                color: white
+                display: flex
+                font-size: 18px
+                line-height: 1.3
+                font-family: $heading-font
+                justify-content: space-between
+                &:not(:last-child)
+                    margin-bottom: 40px
+                i
+                    font-size: 12px
+                    transition: 0.4s
+                    margin-left: 10px
+                    +circle(#353535, 22px)
+                &:hover
+                    i
+                        color: $black-color
+                        background: $primary-color
+                    
+/* Pricing Tab */
+.pricing-tab
+    justify-content: center
+    li
+        &:first-child button:after,
+        &:last-child button:before
+            content: ''
+            +size(30px)
+            transition: 0.5s
+            background: #0FCD81
+            border-radius: 50%
+        &:first-child button:after
+            margin-left: 10px
+        &:last-child button:before
+            margin-right: 10px
+        &:first-child button:before
+            position: absolute
+            +size(60px, 32px)
+            content: ''
+            top: 50%
+            right: 0
+            z-index: -1
+            background: #0FCD81
+            border-radius: 25px
+            transform: translate(50%, -50%)
+        button
+            padding: 0
+            z-index: 1
+            display: flex
+            color: #fefeff
+            font-size: 16px
+            font-weight: 700
+            align-items: center
+            position: relative
+            background: transparent
+            text-transform: uppercase
+            font-family: $heading-font
+            &:focus,
+            &:hover
+                color: #fefeff
+            &.active
+                color: $primary-color
+        &:first-child button.active:after,
+        &:last-child button.active:before
+            background: white

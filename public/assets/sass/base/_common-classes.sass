@@ -1,0 +1,441 @@
+/*******************************************************/
+/*****************  ## Common Classes *****************/
+/*******************************************************/
+.page-wrapper
+    position: relative
+    z-index: 9
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+    min-width: 300px
+    
+.container
+    +res-ab(xl)
+        max-width: $container
+        padding-left: $gutter/2
+        padding-right: $gutter/2
+        &.container-1620
+            max-width: 1650px
+        &.container-1200
+            max-width: 1230px
+        
+.container-fluid
+    +res-ab(xxl)
+        +gapLR(padding, 70px)
+    &.gap-wide
+        +res-ab(xxl)
+            +gapLR(padding, 100px)
+
+.row
+    --bs-gutter-x: 30px
+        
+.row-cols-xl-7
+    > *
+        +res-ab(xl)
+            width: 14.2857%
+            flex: 0 0 auto
+        
+.no-gap
+    +colgap(0)
+    
+@for $i from 1 through 15
+    .gap-#{10 * $i}
+        +res-ab(xxl)
+            --bs-gutter-x: #{10px * $i}
+    
+.col-small
+    +res-bl(xs)
+        flex: 0 0 100%
+        max-width: 100%
+      
+    
+/** Section Title style **/
+.section-title
+    margin-top: -7px
+    .sub-title
+        font-weight: 500
+        display: block
+        color: rgba(255, 255, 255, 0.65)
+    h2
+        margin-bottom: 25px
+        span
+            color: $primary-color
+        +res-bl(md)
+            font-size: 35px
+        +res-bl(ms)
+            font-size: 30px
+            line-height: 1.3
+    h6
+        font-size: 18px
+        span
+            color: $primary-color
+   
+/** Button style **/
+.theme-btn,
+a.theme-btn
+    z-index: 1
+    cursor: pointer
+    overflow: hidden
+    transition: 0.5s
+    font-weight: 600
+    text-align: center
+    padding: 10px 35px
+    align-items: center
+    position: relative
+    color: $black-color
+    border-radius: 15px
+    display: inline-flex
+    justify-content: center
+    text-transform: capitalize
+    background: $primary-color
+    i
+        transition: 0.5s
+        margin-left: 10px
+    &:hover
+        i
+            margin-left: 13px;
+            margin-right: -3px
+    +res-bl(sm)
+        padding: 8px 25px
+    &.style-two
+        color: $base-color
+        background: transparent
+        border: 1px solid rgba(41, 41, 41, 0.1)
+        &:hover
+            color: white
+            background: $primary-color
+            border-color: $primary-color
+    &.style-three
+        background: $heading-color
+
+/* Details Btn */
+.details-btn
+    +circle(#131313, 50px)
+    display: inline-block
+    transform: rotate(-45deg)
+    border: 1px solid $border-color
+    &:hover
+        color: $black-color
+        background: $primary-color
+
+/* Read More */
+.read-more
+    color: white
+    font-size: 14px
+    align-items: center
+    display: inline-flex
+    text-transform: capitalize
+    i
+        float: right
+        margin-top: 2px
+        margin-left: 7px
+        transition: 0.5s
+    &:hover
+        color: $primary-color
+        i
+            margin-left: 10px
+                
+/* List style one */
+.list-style-one
+    li
+        color: white
+        display: flex
+        font-weight: 500
+        align-items: center
+        +res-ab(xs)
+            font-size: 20px
+        &:before
+            content: "\f00c"
+            line-height: 1
+            margin-top: 2px
+            margin-right: 12px
+            color: $primary-color
+            font-family: "Font Awesome 5 Pro"
+        &:not(:last-child)
+            margin-bottom: 20px
+    &.two-column
+        display: flex
+        flex-wrap: wrap
+        li
+            width: 48%
+            +res-bl(ms)
+                width: 100%
+                
+/* List style two */
+.list-style-two
+    li
+        display: flex
+        align-items: center
+        +res-ab(xs)
+            font-size: 20px
+        &:before
+            content: "\f00c"
+            line-height: 1
+            font-size: 16px
+            margin-right: 20px
+            color: $lighter-color
+            +circle($primary-color, 30px)
+            font-family: "Font Awesome 5 Pro"
+        &:not(:last-child)
+            margin-bottom: 25px
+
+        
+/** Social Link One **/
+.social-style-one
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -5px)
+    a
+        color: #B0AFAF
+        font-size: 14px
+        +gapLR(margin, 5px)
+        +circle(#0C0B0B, 35px)
+        &:hover
+            color: $black-color
+            background: $primary-color
+    
+/** Social Link Two **/
+.social-style-two
+    flex-wrap: wrap
+    display: inline-flex
+    +gapLR(margin, -12px)
+    a
+        color: rgba(255, 255, 255, 0.35)
+        +gapLR(margin, 12px)
+        &:hover
+            color: $primary-color
+        
+
+/*** Preloader style ** */
+.preloader
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 9999999
+    background-color: #131313
+    background-repeat: no-repeat
+    background-position: center center
+    background-image: url(../images/preloader.gif)
+
+/* Pagination */    
+.pagination
+    align-items: center
+    +gapLR(margin, -15px)
+    li
+        margin: 10px 15px 0
+        a,
+        .page-link
+            padding: 0
+            border: none
+            font-size: 24px
+            box-shadow: none
+            font-weight: 600
+            color: $base-color
+            background: transparent
+        &.active,
+        &:hover:not(.disabled)
+            .page-link
+                background: transparent
+                color: $primary-color
+        
+/* Rating */
+.ratting
+    line-height: 1
+    align-items: center
+    display: inline-flex
+    +gapLR(margin, -5px)
+    i
+        margin: 5px
+        color: #AB6034
+                
+/*** Slick Arrows ***/
+.slick-arrow
+    +size(50px)
+    color: white
+    transition: 0.5s
+    line-height: 50px
+    border-radius: 50%
+    background: transparent
+    border: 1px solid $border-color
+    &:focus,
+    &:hover
+        color: $black-color
+        background: $primary-color
+        border-color: $primary-color
+    
+.slider-arrows
+    button
+        &:first-child
+            margin-right: 5px
+            transform: rotate(45deg)
+        &:last-child
+            transform: rotate(-45deg)
+    
+                
+/*** Slick Dots ***/
+.slick-dots
+    +flexcenter(center)
+    li
+        position: relative
+        cursor: pointer
+        margin: 8px
+        +size(6px)
+        opacity: 0.3
+        transition: 0.5s
+        border-radius: 50%
+        background: #1D1B1A
+        button
+            opacity: 0
+            height: 0
+        &:before
+            content: ''
+            +size(0)
+            left: 50%
+            top: 50%
+            transition: 0.5s
+            border-radius: 50%
+            position: absolute
+            border: 1px solid $primary-color
+            transform: translate(-50%, -50%)
+        &.slick-active
+            background: $primary-color
+            opacity: 1
+            &:before
+                +size(21px)
+            
+/* Before After none */
+.before-after-none
+    &:after,
+    &:before
+        display: none
+
+/*** Scroll Top style ***/
+.scroll-top
+    position: fixed
+    bottom: 25px
+    right: 0
+    +size(40px)
+    z-index: 99
+    color: black
+    display: none
+    font-size: 14px
+    cursor: pointer
+    line-height: 40px
+    border-radius: 5px
+    background: $primary-color
+    animation: pulse 2s infinite
+  
+/* Text White */
+.text-white
+    *, a,
+    .count-text,
+    .footer-newsletter-content .sub-title
+        color: white
+    li li
+        .dropdown-btn
+            span
+                color: $heading-color
+    .copyright-area
+        p
+            opacity: 0.5
+        a
+            opacity: 0.5
+            &:hover
+                opacity: 1
+        
+/*Project Filter*/
+.filter-btns-one
+    display: flex
+    flex-wrap: wrap
+    +gapLR(margin, -20px)
+    li
+        line-height: 1
+        cursor: pointer
+        font-size: 18px
+        transition: 0.5s
+        font-weight: 500
+        position: relative
+        margin: 0 20px 20px
+        padding-bottom: 15px
+        color: rgba(255, 255, 255, 0.35)
+        &:after
+            opacity: 0
+            content: ''
+            +poLT(0, 100%)
+            +size(30px, 3px)
+            transition: 0.5s
+            background: $primary-color
+        &.current
+            color: $primary-color
+            &:after
+                opacity: 1
+        
+.bg-lines
+    span
+        top: 0
+        z-index: -1
+        +size(1px, 100%)
+        position: absolute
+        animation: leftRightOne 18s infinite
+        background: rgba(255, 255, 255, 0.05)
+        @for $i from 1 through 9
+            &:nth-child(#{$i})
+                left: $i * 10%
+                
+/* Position */
+.rel
+    position: relative
+    
+@for $i from 0 through 5
+    .z-#{0 + $i}
+        z-index: 0 + $i
+    
+.overlay
+    +overlay($heading-color, 0.75)
+    
+/* Backgruond Size */
+.bgs-cover
+    background-size: cover
+    background-position: center
+    
+/* Color + Background */
+.bgc-black
+    background-color: $black-color
+.bgc-primary
+    background-color: $primary-color
+.bgc-lighter
+    background-color: $lighter-color
+.for-bgc-black
+    +container(1620px)
+    background: $black-color
+    
+/* Border Radius */
+@for $i from 1 through 6
+    .br-#{5 * $i}
+        border-radius: 5px * $i
+    
+/* Home Two */
+.home-two
+    .theme-btn
+        border-radius: 0
+        text-transform: uppercase
+        +res-ab(lg)
+            padding: 13px 38px
+            letter-spacing: 2.55px
+    .sub-title
+        font-size: 17px
+        display: inline-flex
+        color: $primary-color
+        text-transform: uppercase
+        i
+            margin-right: 10px
+    .section-title
+        h2
+            line-height: 1.36
+            text-transform: uppercase
+            +res-ab(lg)
+                font-size: 50px
+    .bgc-black
+        --black-color: #0F0E0E

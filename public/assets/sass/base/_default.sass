@@ -1,0 +1,162 @@
+/*******************************************************/
+/******************* ## Default Style *****************/
+/*******************************************************/
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    box-shadow: none
+
+body
+    color: $base-color
+    background: #131313
+    font-weight: 400
+    line-height: 30px
+    font-size: $base-size
+    font-family: $base-font
+    @each $color, $value in $colors
+        --#{$color}: #{$value}
+
+a
+    color: $base-color
+    cursor: pointer
+    outline: none
+    transition: 0.5s
+    text-decoration: none
+    &:hover, &:focus, &:visited
+        text-decoration: none
+        outline: none
+    &:hover
+        color: $primary-color
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+    color: $heading-color
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white h1 a,
+.text-white h2 a,
+.text-white h3 a,
+.text-white h4 a,
+.text-white h5 a,
+.text-white h6 a
+    color: white
+
+h1, .h1
+    @extend %h1
+
+h2, .h2
+    @extend %h2
+
+h3, .h3
+    @extend %h3
+
+h4, .h4
+    @extend %h4
+
+h5, .h5
+    @extend %h5
+
+h6, .h6
+    @extend %h6
+
+ul, li
+    list-style: none
+    padding: 0
+    margin: 0
+
+img
+    max-width: 100%
+    display: inline-block
+    
+mark
+    color: $primary-color
+    background: transparent
+    text-decoration: underline
+ 
+header, section, footer
+    +clearfix
+
+/*======= Input Styles =======*/
+input,
+select,
+textarea,
+.nice-select,
+.form-control
+    width: 100%
+    height: auto
+    border: none
+    font-size: 20px
+    border-radius: 0
+    @extend %heading
+    padding: 20px 0
+    background-color: #fff
+    border-bottom: 2px solid rgba(41, 41, 41, 0.1)
+    &::placeholder
+        color: $heading-color
+    &:focus
+        border-bottom: 2px solid rgba(41, 41, 41, 0.1)
+    
+.nice-select
+    font-size: 20px
+    line-height: 1.3
+    &:after
+        +size(8px)
+        right: 8px
+        border-color: $heading-color
+    .current
+        font-weight: 500
+        color: $heading-color
+    .list
+        min-width: 100%
+        border-radius: 0
+    
+textarea
+	display: inherit
+	padding-top: 20px
+
+label
+    cursor: pointer
+    font-weight: 500
+    margin-bottom: 5px
+    color: $base-color
+
+.form-group
+    position: relative
+    margin-bottom: 15px
+    
+input:focus,
+button:focus,
+.form-control:focus
+    outline: none
+    box-shadow: none
+    border-color: #cfdbf1
+    
+input[type=search]::-ms-clear
+	display: none
+	width: 0
+	height: 0
+
+input[type=search]::-ms-reveal
+	display: none
+	width: 0
+	height: 0
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration
+	display: none
+
+input[type=checkbox], input[type=radio]
+	height: auto
+	width: auto
+    
+/* For Scroll Animation */
+html
+    scroll-behavior: unset !important

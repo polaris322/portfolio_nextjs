@@ -1,0 +1,55 @@
+/*******************************************************/
+/******************** ## Awward Area ******************/
+/*******************************************************/
+.award-box
+    position: relative
+    margin: 0 -1px -1px 0
+    font-family: $heading-font
+    padding: 55px 35px 45px 45px
+    border: 1px solid $border-color
+    +res-bl(xl)
+        +gapLR(padding, 35px)
+    .year
+        opacity: 0
+        +poRT(0, 10px)
+        transition: 0.25s
+        font-size: 18px
+        line-height: 1
+        font-weight: 500
+        padding: 10px 35px
+        color: $black-color
+        background-color: $primary-color
+    .tag
+        display: block
+        line-height: 1
+        font-size: 46px
+        font-weight: 700
+        transition: 0.35s
+        color: transparent
+        margin-bottom: 25px
+        text-transform: uppercase
+        -webkit-text-stroke: 1px white
+        +res-bl(xs)
+            font-size: 40px
+    .count-title
+        .count
+            color: white
+            font-size: 34px
+            font-weight: 700
+            +res-bl(xs)
+                font-size: 30px
+        .title
+            color: white
+            font-weight: 500
+            text-transform: uppercase
+            +res-bl(xs)
+                font-size: 14px
+            &:before
+                content: '/'
+                margin: 0 5px
+    &:hover
+        .year
+            top: 0
+            opacity: 1
+        .tag
+            color: white

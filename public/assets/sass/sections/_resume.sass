@@ -1,0 +1,169 @@
+/*******************************************************/
+/******************** ## Resume Area *******************/
+/*******************************************************/
+.big-icon
+    font-size: 130px
+    color: $primary-color
+    +circle($lighter-color, 270px)
+    border: 1px solid $border-color
+    +res-bt(lg, xl)
+        +size(200px)
+        font-size: 100px
+        line-height: 200px
+    +res-bl(xs)
+        +size(200px)
+        font-size: 100px
+        line-height: 200px
+    
+.resume-items-wrap
+    z-index: 1
+    position: relative
+    border-radius: 15px
+    padding: 60px 60px 1px
+    background: $lighter-color
+    +res-bl(xl)
+        +gapLR(padding, 25px)
+    &:before
+        content: ''
+        +abs-middle()
+        +size(1px, 70%)
+        background: $border-color
+        +res-bl(xl)
+            left: 45%
+        +res-bl(md)
+            display: none
+    
+.resume-item
+    display: flex
+    margin-bottom: 55px
+    .icon
+        flex: none
+        transition: 0.5s
+        margin-right: 20px
+        +circle(#131313, 40px)
+        transform: rotate(-45deg)
+        color: rgba(255, 255, 255, 0.35)
+    .content
+        .years
+            line-height: 1
+            display: block
+            margin-bottom: 20px
+        h4
+            margin-bottom: 5px
+            +res-bl(ms)
+                font-size: 20px
+                line-height: 1.3
+        .company
+            color: rgba(255, 255, 255, 0.35)
+    &:hover
+        .icon
+            color: $black-color
+            background: $primary-color
+        
+/* Resume Box style */
+.resume-area-two
+    clip-path: polygon(50% 0%, 100% 65px, 100% 100%, 0 100%, 0 65px)
+    +res-bl(lg)
+        clip-path: polygon(50% 0%, 100% 35px, 100% 100%, 0 100%, 0 35px)
+
+.resume-box
+    padding: 60px
+    display: flex
+    background: $lighter-color
+    justify-content: space-between
+    +res-bl(sm)
+        display: block
+        padding-bottom: 25px
+    +res-bl(xs)
+        +gapLR(padding, 35px)
+    .timeline-item
+        &:not(:last-child)
+            margin-bottom: 60px
+        .duration
+            color: white
+            display: block
+            font-size: 15px
+            font-weight: 500
+            margin-bottom: 8px
+            text-transform: uppercase
+            font-family: $heading-font
+            i
+                margin-right: 7px
+                color: $primary-color
+        .title
+            font-size: 18px
+            margin-bottom: 15px
+            text-transform: uppercase
+        .details-btn
+            +size(40px)
+            border: none
+            line-height: 40px
+        &:hover
+            .details-btn
+                color: $black-color
+                background: $primary-color
+        +res-bl(sm)
+            margin-bottom: 35px !important
+    .resume-column
+        &:not(:first-child)
+            order: 2
+    .resume-line
+        width: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        border-right: 1px dashed $border-color
+        +res-bl(md)
+            display: none
+        .resume-dots
+            +size(8px)
+            margin-left: -4px
+            border-radius: 50%
+            position: relative
+            background: $primary-color
+            &:after
+                content: ''
+                +size(28px)
+                +abs-middle()
+                border-radius: 50%
+                border: 1px solid $primary-color
+            
+.timeline-heading
+    display: flex
+    text-align: center
+    align-items: center
+    flex-direction: column
+    .title
+        color: white
+        line-height: 1
+        font-size: 115px
+        font-weight: 500
+        padding: 22px 75px
+        border-radius: 80px
+        display: inline-block
+        text-transform: uppercase
+        background: $lighter-color
+        font-family: $heading-font
+        +res-bl(md)
+            font-size: 10vw
+    .arrow
+        font-size: 85px
+        margin-top: 15px
+        text-align: center
+        margin-bottom: 45px
+        +res-bl(md)
+            font-size: 10vw
+        
+.resume-box-wrap
+    display: flex
+    flex-direction: column
+    &.design-two
+        +res-ab(xl)
+            .timeline-heading
+                order: 2
+                .title
+                    order: 2
+                .arrow
+                    margin-top: 45px
+                    margin-bottom: 15px
+                    transform: rotate(180deg)

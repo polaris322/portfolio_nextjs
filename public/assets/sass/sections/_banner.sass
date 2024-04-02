@@ -1,0 +1,48 @@
+/*******************************************************/
+/******************* ## Page Banner *******************/
+/*******************************************************/
+.banner-inner
+    h1
+        font-size: 75px
+        font-weight: 500
+        margin-bottom: 16px
+        text-transform: capitalize
+        +res-bl(lg)
+            font-size: 65px
+        +res-bl(md)
+            font-size: 55px
+        +res-bl(sm)
+            font-size: 45px
+        +res-bl(xs)
+            font-size: 35px
+    h3
+        margin-bottom: 20px
+        +res-ab(md)
+            font-size: 35px
+        +res-bl(xs)
+            font-size: 25px
+            
+.breadcrumb
+    padding: 0
+    margin: 0
+    font-size: 18px
+    background: transparent
+    text-transform: capitalize
+    +res-bl(xs)
+        font-size: 16px
+    .breadcrumb-item
+        padding: 0
+        +flexcenter(center)
+        a
+            color: white
+        &.active
+            color: $primary-color
+            text-decoration: underline
+        &+.breadcrumb-item::before
+            +gapLR(margin, 20px)
+            flex: none
+            content: ""
+            +size(5px)
+            padding-right: 0
+            border-radius: 50%
+            background: white

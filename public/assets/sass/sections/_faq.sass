@@ -1,0 +1,74 @@
+/*******************************************************/
+/******************** ## FAQs Area *********************/
+/*******************************************************/
+.faq-image-part
+    max-width: 550px
+    position: relative
+    padding-right: 22%
+    padding-bottom: 25%
+    .image-two
+        +poRB(0)
+        max-width: 75%
+    &:after,
+    &:before
+        content: ''
+        z-index: -1
+        +size(305px)
+        position: absolute
+        background: url(../images/faqs/faq-dots.png)
+        +res-bl(ms)
+            +size(200px)
+    &:before
+        top: 6%
+        right: 14%
+    &:after
+        bottom: 8%
+        left: 10%
+    .square-shape
+        +size(25px)
+        +poLB(7.5%, 10.5%)
+        background: $primary-color
+
+.accordion-item
+    padding: 20px 25px
+    border-radius: 12px
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bl(xs)
+        +gapLR(padding, 15px)
+    &:not(:last-child)
+        margin-bottom: 15px
+    &:first-of-type
+        border-top-left-radius: 12px
+        border-top-right-radius: 12px
+    &:last-of-type
+        border-bottom-left-radius: 12px
+        border-bottom-right-radius: 12px
+    .accordion-button
+        padding: 0
+        @extend %heading
+        box-shadow: none
+        background: transparent
+        &:focus
+            box-shadow: none
+        &:after
+            display: none
+        &:before
+            flex: none
+            color: black
+            content: "\f105"
+            font-weight: 400
+            transition: 0.5s
+            text-align: right
+            border-radius: 50%
+            margin-right: 15px
+            +circle($primary-color, 25px)
+            font-family: "Font Awesome 5 Pro"
+        &:not(.collapsed):before
+            transform: rotate(90deg)
+    .accordion-body
+        padding: 15px 0 0 40px
+        p
+            &:last-child
+                margin-bottom: 0
+            

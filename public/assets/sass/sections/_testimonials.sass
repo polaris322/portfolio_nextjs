@@ -1,0 +1,46 @@
+/*******************************************************/
+/***************** ## Testimonials Area ***************/
+/*******************************************************/
+.testimonial-item
+    transition: 0.5s
+    text-align: center
+    padding: 50px 60px
+    border-radius: 16px
+    background: $black-color
+    border: 1px solid $border-color
+    +res-bl( xl)
+        +gapLR(padding, 25px)
+    .author
+        position: relative
+        margin-bottom: 35px
+        display: inline-block
+        img
+            display: inline-block
+        &:before
+            content: "\f10d"
+            +poRT(90%, 5px)
+            font-weight: 900
+            transition: 0.5s
+            color: $primary-color
+            +circle(#1F1F1F, 60px)
+            font-family: "Font Awesome 5 Pro"
+    .text
+        margin-bottom: 30px
+    .testi-des
+        h5
+            margin-bottom: 0
+            +res-ab(xs)
+                font-size: 22px
+        span
+            font-size: 14px
+            color: $primary-color
+    &:hover
+        background: #131313
+        .author:before
+            color: $black-color
+            background: $primary-color
+    
+.testimonials-wrap
+    +gapLR(margin, -15px)
+    .testimonial-item
+        +gapLR(margin, 15px)

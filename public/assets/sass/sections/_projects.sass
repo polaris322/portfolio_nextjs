@@ -1,0 +1,255 @@
+/*******************************************************/
+/******************* ## Projects Area *****************/
+/*******************************************************/
+.project-image
+    margin-bottom: 45px
+    img
+        width: 100%
+
+.project-content
+    margin-bottom: 45px
+    +gapLR(padding, 60px)
+    +res-bt(lg, xl)
+        +gapLR(padding, 20px)
+    +res-bl(md)
+        +gapLR(padding, 40px)
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    +res-bl(xs)
+        +gapLR(padding, 0)
+    .sub-title
+        display: block
+        margin-bottom: 15px
+        color: $primary-color
+    h2
+        margin-bottom: 30px
+        +res-bl(md)
+            font-size: 35px
+        +res-bl(ms)
+            font-size: 30px
+            line-height: 1.3
+    .details-btn
+        margin-top: 25px
+        
+        
+.project-item.style-two
+    margin-bottom: 60px
+    .project-image
+        margin-bottom: 32px
+        +overlay($lighter-color, 0)
+        &::before
+            z-index: 1
+            transition: .3s
+        .details-btn
+            z-index: 2
+            opacity: 0
+            +abs-middle()
+            font-size: 20px
+            color: $black-color
+            +circle($primary-color, 65px)
+            transform: translate(-50%, -50%) rotate(-45deg)    
+    .project-content
+        margin-bottom: 0
+        +gapLR(padding, 50px)
+        +res-bl(xl)
+            +gapLR(padding, 25px)
+        +res-bl(xs)
+            +gapLR(padding, 0)
+        h3
+            +res-bl(ms)
+                font-size: 25px
+    &:hover
+        .project-image
+            &::before
+                opacity: .65
+            .details-btn
+                opacity: 1
+        
+                
+.project-item.style-three
+    margin-bottom: 30px
+    position: relative
+    &:before
+        +poLB(0)
+        content: ''
+        opacity: 0
+        transition: 0.5s
+        max-height: 100%
+        +size(100%, 250px)
+        background: linear-gradient(180deg, rgba(201, 243, 29, 0.00) 0%, #C9F31D 100%)
+    .project-image
+        margin-bottom: 0
+    .project-content
+        +poLB(0)
+        opacity: 0
+        width: 100%
+        padding: 40px
+        transition: 0.5s
+        margin-bottom: 0
+        +res-bl(xs)
+            +gapLR(padding, 25px)
+        .project-btn
+            font-size: 22px
+            margin-bottom: 5px
+            display: inline-block
+            color: $lighter-color
+            transform: rotate(-45deg)
+        .sub-title
+            font-weight: 500
+            margin-bottom: 10px
+            color: $lighter-color
+        h4
+            font-weight: 700
+            margin-bottom: 0
+            a
+                color: $lighter-color
+    &:hover
+        &:before
+            opacity: 1
+        .project-content
+            opacity: 1
+        
+/* Project Style Four */
+.projects-area-four
+    background: #0F0E0E
+        
+.project-item.style-four
+    margin-bottom: 50px
+    .image
+        position: relative
+        .hover-box
+            opacity: 0
+            +size(170px)
+            +poLT(50%, 28%)
+            font-weight: 700
+            transition: 0.5s
+            color: $black-color
+            +flexcenter(center)
+            border-radius: 50%
+            flex-direction: column
+            text-transform: uppercase
+            transform: translate(-50%)
+            background: url('../images/projects/btn-bg.png')
+            background-size: cover
+            +res-bl(lg)
+                top: 15%
+            +res-bl(xs)
+                +size(120px)
+                font-size: 14px
+            i
+                margin-top: 5px
+                transform: rotate(45deg)
+    .content
+        +poLB(20px, 25px)
+        .title
+            min-width: 243px
+            font-weight: 600
+            margin-bottom: 0
+            padding: 7px 15px
+            background: $primary-color
+            a
+                color: $black-color
+        .sub-title
+            padding: 6px 15px
+            display: inline-block
+            background: $black-color
+            text-transform: capitalize
+            color: rgba(255, 255, 255, 0.6)
+    &:hover
+        .hover-box
+            opacity: 1
+            
+.project-details-btn
+    text-align: center
+    .more-btn
+        +size(400px)
+        color: white
+        line-height: 1
+        font-size: 85px
+        padding-top: 5%
+        font-weight: 500
+        border-radius: 50%
+        align-items: center
+        display: inline-flex
+        flex-direction: column
+        justify-content: center
+        text-transform: uppercase
+        border: 2px solid $border-color
+        +res-bl(lg)
+            +size(250px)
+            font-size: 44px
+        i
+            margin-top: 10px
+            font-size: 1.5em
+            color: $primary-color
+            transform: rotate(45deg)
+        
+/* Project Details */
+.project-details-content
+    h3
+        margin-bottom: 35px
+    .list-style-one
+        max-width: 600px
+        justify-content: space-between
+        li
+            font-size: 18px
+            font-weight: 400
+            margin-bottom: 20px
+            &:before
+                font-size: 24px
+                margin-right: 15px
+            
+.project-details-info
+    padding: 40px 60px
+    border-radius: 15px
+    background-color: $primary-color
+    +res-bt(lg, xl)
+        +gapLR(padding, 35px)
+    +res-bl(xs)
+        +gapLR(padding, 35px)
+    
+.pd-info-item
+    &:not(:last-child)
+        margin-bottom: 35px
+    span
+        display: block
+        color: $lighter-color
+        font-family: $heading-font
+    h5
+        color: $lighter-color
+        font-family: $base-font
+        +res-ab(xs)
+            font-size: 22px
+        
+.tag-share
+    flex-wrap: wrap
+    padding: 20px 40px 0
+    border-radius: 12px
+    +flexcenter(space-between)
+    background: $lighter-color
+    border: 1px solid $border-color
+    +res-bl(ms)
+        +gapLR(padding, 15px)
+    .item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        > b
+            color: white
+            font-weight: 500
+            margin-right: 20px
+        h5
+            margin: 0 20px 0 0
+
+.big-letter:first-letter
+    float: left
+    font-size: 27px
+    margin-top: 5px
+    font-weight: 700
+    padding: 10px 16px
+    border-radius: 12px
+    margin-right: 20px
+    color: $lighter-color
+    text-transform: uppercase
+    font-family: $heading-font
+    background: $primary-color
