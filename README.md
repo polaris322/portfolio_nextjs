@@ -1,4 +1,4 @@
-# Personal Portfolio for Mosul Thomas built in Next.js
+# Portfolio website
 
 ## Description
 
