@@ -2,7 +2,7 @@
 
 ## Description
 
-It is the source code of personal portfolio website for Mosul Thomas built in Next.js 14.
+It is the source code of personal portfolio website for Thomas Chan built in Next.js 14.
 
 ## Project setup
 
