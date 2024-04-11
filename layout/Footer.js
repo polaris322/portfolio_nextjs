@@ -32,7 +32,7 @@ const Footer1 = () => {
                 <p>
                   Copyright @{date},{" "}
                   <Link legacyBehavior href="/">
-                    Mosul Thomas
+                    Thomas Chan
                   </Link>{" "}
                   All Rights Reserved
                 </p>
@@ -41,19 +41,16 @@ const Footer1 = () => {
             <div className="col-lg-6 text-lg-end">
               <ul className="footer-bottom-nav">
                 <li>
-                  <a href="mailto:mousultom@outlook.com" target="_blank">Email</a>
+                  <a href="mailto:chanthomas2203@gmail.com" target="_blank">Email</a>
                 </li>
                 <li>
-                  <a href="callto:+000(123)45688" target="_blank">Whatsapp</a>
+                  <a href="callto:+85296684026" target="_blank">Whatsapp</a>
                 </li>
                 <li>
-                  <a href="https://t.me/mosultom" target="_blank">Telegram</a>
+                  <a href="https://t.me/tomchan322" target="_blank">Telegram</a>
                 </li>
                 <li>
-                  <a href="https://join.skype.com/invite/zBIZZonjiFgR" target="_blank">Skype</a>
-                </li>
-                <li>
-                  <a href="https://join.skype.com/invite/zBIZZonjiFgR" target="_blank">LinkedIn</a>
+                  <a href="https://join.skype.com/invite/srCbOlkR3Vqo" target="_blank">Skype</a>
                 </li>
               </ul>
             </div>

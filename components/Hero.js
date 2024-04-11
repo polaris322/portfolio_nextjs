@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="hero-content rmb-55 wow fadeInUp delay-0-2s">
               <span className="h2">Hello, i’m </span>
               <h1>
-                <b>Mosul Thomas</b> web developer
+                <b>Thomas Chan</b> web engineer
               </h1>
               <p>
                 Welcome to my portfolio, where innovation meets efficiency in crafting cutting-edge software solutions for a digital world.
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
           <div className="col-lg-5">
             <div className="author-image-part wow fadeIn delay-0-3s">
-              <img src="/assets/images/hero/young.jpg" alt="Author" className="img img-thumbnail rounded-circle w-75"/>
+              <img src="/assets/images/hero/chan.jpg" alt="Author" className="img img-thumbnail rounded-circle w-75"/>
             </div>
           </div>
         </div>

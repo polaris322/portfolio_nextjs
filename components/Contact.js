@@ -20,7 +20,7 @@ const Contact = () => {
               <ul className="list-style-two">
                 <li>7+ Years Of Experience</li>
                 <li>Professional Web Developer</li>
-                <li>Quality Assurance Manager</li>
+                <li>Scrum Master</li>
                 <li>Efficient Troubleshooter</li>
               </ul>
             </div>

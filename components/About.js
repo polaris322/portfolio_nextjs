@@ -13,7 +13,7 @@ const About = () => {
                     Products
                   </h2>
                   <p className='mw-100'>
-                    I'm a seasoned senior full-stack web developer with a passion for crafting exceptional digital experiences.
+                    I'm an experienced senior web engineer with a passion for crafting exceptional digital experiences.
                     With over 7 years of hands-on experience in the field, I bring a wealth of expertise in both front-end and
                     back-end development to the table.
                     Throughout my career, I've had the opportunity to work on a diverse range of projects, from small-scale
@@ -38,7 +38,7 @@ const About = () => {
                     <div className="content">
                       <span>Email</span>
                       <br />
-                      <a href="mailto:mousultom@outlook.com" target="_blank">mousultom@outlook.com</a>
+                      <a href="mailto:chanthomas2203@gmail.com" target="_blank">chanthomas2203@gmail.com</a>
                     </div>
                   </div>
                   <div className="info-box-item">
@@ -46,7 +46,7 @@ const About = () => {
                     <div className="content">
                       <span>Whatsapp</span>
                       <br />
-                      <a href="callto:+000(123)45688" target="_blank">+8801234588</a>
+                      <a href="callto:+85296684026" target="_blank">+85296684026</a>
                     </div>
                   </div>
                   <div className="info-box-item">
@@ -54,7 +54,7 @@ const About = () => {
                     <div className="content">
                       <span>Telegram</span>
                       <br />
-                      <a href="https://t.me/mosultom" target="_blank">mosultom</a>
+                      <a href="https://t.me/tomchan322" target="_blank">@tomchan322</a>
                     </div>
                   </div>
                   <div className="info-box-item">
@@ -62,15 +62,7 @@ const About = () => {
                     <div className="content">
                       <span>Skype</span>
                       <br />
-                      <a href="https://join.skype.com/invite/zBIZZonjiFgR" target="_blank">Thomas Mosul</a>
-                    </div>
-                  </div>
-                  <div className="info-box-item">
-                    <i className="fab fa-linkedin-in" />
-                    <div className="content">
-                      <span>LinkedIn</span>
-                      <br />
-                      <a href="https://join.skype.com/invite/zBIZZonjiFgR" target="_blank">Mosul Thomas</a>
+                      <a href="https://join.skype.com/invite/srCbOlkR3Vqo" target="_blank">live:.cid.cec7f5448748adfe</a>
                     </div>
                   </div>
                 </div>

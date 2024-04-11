@@ -27,9 +27,9 @@ const Resume = () => {
                       <i className="far fa-arrow-right" />
                     </div>
                     <div className="content">
-                      <span className="years">2021 - 2023</span>
-                      <h4>Quality Assurance Manager</h4>
-                      <span className="company">WeCode Inc, Tsukuba</span>
+                      <span className="years">2022 - 2023</span>
+                      <h4>Front End Team Lead</h4>
+                      <span className="company">WeCode Inc, Remote</span>
                     </div>
                   </div>
                 </div>
@@ -39,9 +39,9 @@ const Resume = () => {
                       <i className="far fa-arrow-right" />
                     </div>
                     <div className="content">
-                      <span className="years">2016 - 2020</span>
-                      <h4>Lead Backend / Blockchain Developer</h4>
-                      <span className="company">The Verticals, Singapore</span>
+                      <span className="years">2020 - 2022</span>
+                      <h4>Lead Front End Developer</h4>
+                      <span className="company">Grab, Singapore</span>
                     </div>
                   </div>
                 </div>
@@ -51,9 +51,9 @@ const Resume = () => {
                       <i className="far fa-arrow-right" />
                     </div>
                     <div className="content">
-                      <span className="years">2014 - 2025</span>
-                      <h4>Front-end Developer</h4>
-                      <span className="company">Grab, Singapore</span>
+                      <span className="years">2018 - 2020</span>
+                      <h4>Web Development Engineer</h4>
+                      <span className="company">The Verticals, Singapore</span>
                     </div>
                   </div>
                 </div>
@@ -63,9 +63,21 @@ const Resume = () => {
                       <i className="far fa-arrow-right" />
                     </div>
                     <div className="content">
-                      <span className="years">2013 - 2014 </span>
-                      <h4>Intern Developer</h4>
-                      <span className="company">Grab, Singapore</span>
+                      <span className="years">2016 - 2018 </span>
+                      <h4>Front End Developer</h4>
+                      <span className="company">JAVACATZ, Hong Kong</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-5 col-md-6">
+                  <div className="resume-item wow fadeInUp delay-0-4s">
+                    <div className="icon">
+                      <i className="far fa-arrow-right" />
+                    </div>
+                    <div className="content">
+                      <span className="years">2016 - 2016 </span>
+                      <h4>Front End Developer Intern</h4>
+                      <span className="company">JAVACATZ, Hong Kong</span>
                     </div>
                   </div>
                 </div>

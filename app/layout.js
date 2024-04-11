@@ -30,9 +30,9 @@ const fontFamily = `${inter.variable} ${dm_sans.variable} `;
 export const metadata = {
   title: {
     default:
-      "Mosul Thomas - Full-stack web developer || Personal Portfolio Resume", // a default is required when creating a template
+      "Thomas Chan - Web Engineer || Personal Portfolio Resume", // a default is required when creating a template
   },
-  description: "Personal portfolio of Mosul Thomas, seasoned full-stack engineer",
+  description: "Personal portfolio of Thomas Chan, Seasoned Web Engineer",
 };
 
 export default function RootLayout({ children }) {
